@@ -6,7 +6,7 @@ const useLocalStorage = (key, initialValue) => {
 
         const mode = window.localStorage.getItem(key);
 
-        return mode ? JSON.part(mode) : initialValue;
+        return mode ? JSON.parse(mode) : initialValue;
     })
 
     const setValue = value => {
